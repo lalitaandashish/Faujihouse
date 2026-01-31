@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dashboard</title>
+<style>
+body{background:#eef2f3;font-family:Arial;}
+.card{
+ width:420px;margin:30px auto;
+ background:white;padding:20px;border-radius:12px;
+ box-shadow:0 0 10px #999;
+}
+input,button{width:100%;padding:8px;margin-top:8px;}
+button{background:#11998e;color:white;border:none;}
+.manage{background:#203a43;}
+.logout{background:#c0392b;}
+</style>
+</head>
+<body>
+
+<div class="card">
+<h3>New Booking</h3>
+
+<form method="POST">
+<input name="name" placeholder="Name" required>
+<input name="rank" placeholder="Rank" required>
+<input name="unit" placeholder="Unit" required>
+<input name="room" placeholder="Room No" required>
+
+<label>Check-in</label>
+<input type="date" name="checkin" required>
+
+<label>Check-out</label>
+<input type="date" name="checkout" required>
+
+<input type="number" name="rate" placeholder="Rate / Day ₹" required>
+<input type="number" name="advance" placeholder="Advance ₹" required>
+
+<button>Save Booking</button>
+</form>
+
+<br>
+<a href="/bookings"><button class="manage">Manage Bookings</button></a>
+<a href="/logout"><button class="logout">Logout</button></a>
+</div>
+
+</body>
+</html>

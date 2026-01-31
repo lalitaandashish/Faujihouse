@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Receipt</title>
+<style>
+body{font-family:Arial;}
+.card{
+ width:400px;margin:40px auto;
+ border:1px solid black;
+ padding:20px;
+}
+</style>
+</head>
+<body>
+
+<div class="card">
+<h3 align="center">Fauji House Receipt</h3>
+<hr>
+
+<p><b>Name:</b> {{r[1]}}</p>
+<p><b>Rank:</b> {{r[2]}}</p>
+<p><b>Unit:</b> {{r[3]}}</p>
+<p><b>Room:</b> {{r[4]}}</p>
+
+<p><b>Check-in:</b> {{r[5]}}</p>
+<p><b>Check-out:</b> {{r[6]}}</p>
+<p><b>Total Days:</b> {{r[7]}}</p>
+
+<p><b>Rate / Day:</b> ₹{{r[8]}}</p>
+<p><b>Total Amount:</b> ₹{{r[9]}}</p>
+<p><b>Advance:</b> ₹{{r[10]}}</p>
+<p><b>Balance:</b> ₹{{r[11]}}</p>
+
+<hr>
+<button onclick="window.print()">Print</button>
+<a href="/bookings"><button>Back</button></a>
+</div>
+
+</body>
+</html>

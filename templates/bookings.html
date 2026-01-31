@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Bookings</title>
+<style>
+body{font-family:Arial;background:#f4f6f7;}
+table{width:100%;border-collapse:collapse;}
+th,td{border:1px solid #ccc;padding:6px;text-align:center;}
+th{background:#203a43;color:white;}
+button{padding:5px 10px;}
+.top{margin:10px;}
+.summary{
+ background:white;
+ padding:10px;
+ margin:10px;
+ border-radius:8px;
+}
+</style>
+</head>
+<body>
+
+<div class="top">
+<a href="/dashboard"><button>⬅ Back</button></a>
+</div>
+
+<div class="summary">
+<b>Total Collection:</b> ₹{{ summary[0] or 0 }} |
+<b>Total Advance:</b> ₹{{ summary[1] or 0 }} |
+<b>Total Balance:</b> ₹{{ summary[2] or 0 }}
+</div>
+
+<table>
+<tr>
+<th>ID</th><th>Name</th><th>Rank</th><th>Unit</th><th>Room</th>
+<th>Check-in</th><th>Check-out</th>
+<th>Days</th><th>Rate</th><th>Total</th>
+<th>Advance</th><th>Balance</th>
+<th>Action</th>
+</tr>
+
+{% for r in data %}
+<tr>
+<td>{{r[0]}}</td>
+<td>{{r[1]}}</td>
+<td>{{r[2]}}</td>
+<td>{{r[3]}}</td>
+<td>{{r[4]}}</td>
+<td>{{r[5]}}</td>
+<td>{{r[6]}}</td>
+<td>{{r[7]}}</td>
+<td>{{r[8]}}</td>
+<td>{{r[9]}}</td>
+<td>{{r[10]}}</td>
+<td>{{r[11]}}</td>
+<td>
+<a href="/edit/{{r[0]}}"><button>Edit</button></a>
+<a href="/delete/{{r[0]}}" onclick="return confirm('Delete booking?')">
+<button>Delete</button></a>
+<a href="/receipt/{{r[0]}}"><button>Receipt</button></a>
+</td>
+</tr>
+{% endfor %}
+</table>
+
+</body>
+</html>

@@ -1,0 +1,113 @@
+* {
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+body {
+    margin: 0;
+    background: #f4f6f9;
+}
+
+/* HEADER */
+.header {
+    background: #1f3c5b;
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header img {
+    height: 50px;
+}
+
+.header h1 {
+    font-size: 20px;
+    margin: 0;
+}
+
+/* CARD */
+.card {
+    background: white;
+    width: 420px;
+    margin: 60px auto;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+.card h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* FORM */
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    margin-bottom: 14px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+label {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+/* BUTTONS */
+button {
+    width: 100%;
+    padding: 10px;
+    background: #1f3c5b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #162c44;
+}
+
+/* NAV LINKS */
+.nav {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.nav a {
+    margin: 0 10px;
+    color: #1f3c5b;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* TABLE */
+.table-card {
+    width: 90%;
+    margin: 40px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background: #1f3c5b;
+    color: white;
+    padding: 10px;
+}
+
+td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}

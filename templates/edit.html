@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Edit Booking</title>
+<style>
+body{font-family:Arial;background:#eef2f3;}
+.card{
+ width:420px;margin:30px auto;
+ background:white;padding:20px;border-radius:12px;
+}
+input,button{width:100%;padding:8px;margin-top:8px;}
+button{background:#11998e;color:white;border:none;}
+</style>
+</head>
+<body>
+
+<div class="card">
+<h3>Edit Booking</h3>
+
+<form method="POST">
+<input name="name" value="{{r[1]}}" required>
+<input name="rank" value="{{r[2]}}" required>
+<input name="unit" value="{{r[3]}}" required>
+<input name="room" value="{{r[4]}}" required>
+
+<label>Check-in</label>
+<input type="date" name="checkin" value="{{r[5]}}" required>
+
+<label>Check-out</label>
+<input type="date" name="checkout" value="{{r[6]}}" required>
+
+<input type="number" name="rate" value="{{r[8]}}" required>
+<input type="number" name="advance" value="{{r[10]}}" required>
+
+<button>Update</button>
+</form>
+
+<a href="/bookings"><button style="background:#555;">Back</button></a>
+</div>
+
+</body>
+</html>
